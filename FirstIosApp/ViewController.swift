@@ -7,11 +7,13 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.show(withStatus: "Hello World")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
