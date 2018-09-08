@@ -17,7 +17,11 @@ class ViewController: UIViewController {
 //        SVProgressHUD.show(withStatus: "Hello World")
         // Do any additional setup after loading the view, typically from a nib.
         Alamofire.request("https://nuuneoi.com/courses/500px/list").responseJSON{response in
-            print(response)}
+//            print(response)
+             print("Result: \(response.result)")
+           
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
