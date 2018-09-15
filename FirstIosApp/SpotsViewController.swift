@@ -22,10 +22,27 @@ class SpotsViewController: UITableViewController {
         super.awakeFromNib()
         
         vacationSpots = VacationSpot.loadAllVacationSpots()
-//        print(vacationSpots)
+        
+        
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return vacationSpots.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VacationSpotCell", for: indexPath) as! VacationSpotCell
+        let vacationSpot = vacationSpots[indexPath.row]
+        cell.nameLabel.text = vacationSpot.name
+        cell.locationNameLabel.text = vacationSpot.locationName
+        cell.thumbnailImageView.image = UIImage(named: vacationSpot.thumbnailName)
+        
+        return cell
+    }
+
+    func loadPhoto(){
         Alamofire.request(Constants.baseURLPath).responseJSON{response in
             //            print(response)
-           
+            
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
             }
@@ -33,9 +50,6 @@ class SpotsViewController: UITableViewController {
             
         }
         
-        
-        
     }
-    
    
 }
