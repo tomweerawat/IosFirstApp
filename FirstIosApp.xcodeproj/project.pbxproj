@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25D779EB1ED4D98366D7F491 /* Pods_FirstIosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD5FB550CD49CD0C6A2E82 /* Pods_FirstIosApp.framework */; };
 		CB0AE2D2214D57EF00039FBA /* VacationSpotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0AE2D1214D57EF00039FBA /* VacationSpotCell.swift */; };
+		CB0AE2D4214D59AC00039FBA /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0AE2D3214D59AC00039FBA /* Hero.swift */; };
 		CB11C59F21159AC200CBF0C6 /* SpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11C59E21159AC200CBF0C6 /* SpotsViewController.swift */; };
 		CB1E9E57211475A700A3064A /* vacation_spots.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB1E9E55211475A700A3064A /* vacation_spots.plist */; };
 		CB1E9E58211475A700A3064A /* VacationSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E9E56211475A700A3064A /* VacationSpot.swift */; };
@@ -24,6 +25,7 @@
 		91FBEF617E87FEA93487C9B7 /* Pods-FirstIosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstIosApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstIosApp/Pods-FirstIosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9A9CF6C9F241E51F3A518C27 /* Pods-FirstIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstIosApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstIosApp/Pods-FirstIosApp.release.xcconfig"; sourceTree = "<group>"; };
 		CB0AE2D1214D57EF00039FBA /* VacationSpotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationSpotCell.swift; sourceTree = "<group>"; };
+		CB0AE2D3214D59AC00039FBA /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		CB11C59E21159AC200CBF0C6 /* SpotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsViewController.swift; sourceTree = "<group>"; };
 		CB1E9E55211475A700A3064A /* vacation_spots.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = vacation_spots.plist; sourceTree = "<group>"; };
 		CB1E9E56211475A700A3064A /* VacationSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacationSpot.swift; sourceTree = "<group>"; };
@@ -65,11 +67,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CB0AE2D5214D59CA00039FBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBF4532E21144CBA00E6D937 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CB1E9E542114753A00A3064A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				CB1E9E55211475A700A3064A /* vacation_spots.plist */,
 				CB1E9E56211475A700A3064A /* VacationSpot.swift */,
+				CB0AE2D3214D59AC00039FBA /* Hero.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,10 +106,10 @@
 		CBF4532B21144CB900E6D937 /* FirstIosApp */ = {
 			isa = PBXGroup;
 			children = (
+				CB0AE2D5214D59CA00039FBA /* Controller */,
 				CB0AE2D0214D57B500039FBA /* View */,
 				CB1E9E542114753A00A3064A /* Model */,
 				CBF4532C21144CB900E6D937 /* AppDelegate.swift */,
-				CBF4532E21144CBA00E6D937 /* ViewController.swift */,
 				CBF4533021144CBA00E6D937 /* Main.storyboard */,
 				CBF4533321144CBB00E6D937 /* Assets.xcassets */,
 				CBF4533521144CBB00E6D937 /* LaunchScreen.storyboard */,
@@ -194,12 +205,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirstIosApp/Pods-FirstIosApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -238,6 +251,7 @@
 				CB0AE2D2214D57EF00039FBA /* VacationSpotCell.swift in Sources */,
 				CB1E9E58211475A700A3064A /* VacationSpot.swift in Sources */,
 				CBF4532D21144CB900E6D937 /* AppDelegate.swift in Sources */,
+				CB0AE2D4214D59AC00039FBA /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

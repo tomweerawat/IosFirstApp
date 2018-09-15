@@ -77,6 +77,10 @@
                     <navigationItem key="navigationItem" title="Vacation Spots" id="wdM-cL-I84">
                         <barButtonItem key="backBarButtonItem" title="Back" id="mpn-hd-1cn"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="aRO-TK-d7d" id="e4K-7Y-ALP"/>
+                        <outlet property="tableViewLoad" destination="aRO-TK-d7d" id="Tgh-dB-4Fg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3h-bA-5PZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
