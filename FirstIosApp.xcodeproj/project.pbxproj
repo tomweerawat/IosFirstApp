@@ -11,6 +11,9 @@
 		CB11C59F21159AC200CBF0C6 /* SpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11C59E21159AC200CBF0C6 /* SpotsViewController.swift */; };
 		CB1E9E57211475A700A3064A /* vacation_spots.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB1E9E55211475A700A3064A /* vacation_spots.plist */; };
 		CB1E9E58211475A700A3064A /* VacationSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E9E56211475A700A3064A /* VacationSpot.swift */; };
+		CB2E42FB214CE40700C675B2 /* SpotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2E42FA214CE40700C675B2 /* SpotCell.swift */; };
+		CB9DB4A0214D1F9B00BCEEBF /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DB49F214D1F9B00BCEEBF /* Hero.swift */; };
+		CB9DB4A5214D209D00BCEEBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DB4A4214D209D00BCEEBF /* Constants.swift */; };
 		CBF4532D21144CB900E6D937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF4532C21144CB900E6D937 /* AppDelegate.swift */; };
 		CBF4532F21144CBA00E6D937 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF4532E21144CBA00E6D937 /* ViewController.swift */; };
 		CBF4533221144CBA00E6D937 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF4533021144CBA00E6D937 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		CB11C59E21159AC200CBF0C6 /* SpotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsViewController.swift; sourceTree = "<group>"; };
 		CB1E9E55211475A700A3064A /* vacation_spots.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = vacation_spots.plist; sourceTree = "<group>"; };
 		CB1E9E56211475A700A3064A /* VacationSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacationSpot.swift; sourceTree = "<group>"; };
+		CB2E42FA214CE40700C675B2 /* SpotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotCell.swift; sourceTree = "<group>"; };
+		CB9DB49F214D1F9B00BCEEBF /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		CB9DB4A4214D209D00BCEEBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CBF4532921144CB900E6D937 /* FirstIosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstIosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF4532C21144CB900E6D937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBF4532E21144CBA00E6D937 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +66,25 @@
 			children = (
 				CB1E9E55211475A700A3064A /* vacation_spots.plist */,
 				CB1E9E56211475A700A3064A /* VacationSpot.swift */,
+				CB9DB49F214D1F9B00BCEEBF /* Hero.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CB9DB4A2214D1FCB00BCEEBF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CB2E42FA214CE40700C675B2 /* SpotCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CB9DB4A3214D207F00BCEEBF /* Conts */ = {
+			isa = PBXGroup;
+			children = (
+				CB9DB4A4214D209D00BCEEBF /* Constants.swift */,
+			);
+			path = Conts;
 			sourceTree = "<group>";
 		};
 		CBF4532021144CB900E6D937 = {
@@ -85,6 +108,8 @@
 		CBF4532B21144CB900E6D937 /* FirstIosApp */ = {
 			isa = PBXGroup;
 			children = (
+				CB9DB4A3214D207F00BCEEBF /* Conts */,
+				CB9DB4A2214D1FCB00BCEEBF /* Cell */,
 				CB1E9E542114753A00A3064A /* Model */,
 				CBF4532C21144CB900E6D937 /* AppDelegate.swift */,
 				CBF4532E21144CBA00E6D937 /* ViewController.swift */,
@@ -183,12 +208,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirstIosApp/Pods-FirstIosApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -226,6 +253,9 @@
 				CBF4532F21144CBA00E6D937 /* ViewController.swift in Sources */,
 				CB1E9E58211475A700A3064A /* VacationSpot.swift in Sources */,
 				CBF4532D21144CB900E6D937 /* AppDelegate.swift in Sources */,
+				CB9DB4A5214D209D00BCEEBF /* Constants.swift in Sources */,
+				CB2E42FB214CE40700C675B2 /* SpotCell.swift in Sources */,
+				CB9DB4A0214D1F9B00BCEEBF /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

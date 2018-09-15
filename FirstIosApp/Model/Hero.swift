@@ -8,14 +8,16 @@
 
 import UIKit
 
-class Hero: UIView {
+class Hero {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var name: String?
+    var team: String?
+    var imageUrl: String?
+    
+    init(name: String?, team: String?, imageUrl: String?) {
+        self.name = name
+        self.team = team
+        self.imageUrl = imageUrl
     }
-    */
 
 }

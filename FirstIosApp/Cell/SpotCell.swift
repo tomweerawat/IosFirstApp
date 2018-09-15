@@ -13,6 +13,7 @@ class SpotCell: UITableViewCell {
     @IBOutlet weak var ThumbImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

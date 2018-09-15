@@ -13,13 +13,13 @@
         <!--Vacation Spots-->
         <scene sceneID="zBQ-8s-hEG">
             <objects>
-                <tableViewController id="2Bb-PL-KNW" customClass="SpotsViewController" customModule="VacationSpots" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2Bb-PL-KNW" customClass="SpotsViewController" customModule="FirstIosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="aRO-TK-d7d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="VacationSpotCell" id="EiD-uK-EQS" customClass="VacationSpotCell" customModule="VacationSpots" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SpotCell" id="EiD-uK-EQS" customClass="SpotCell" customModule="FirstIosApp">
                                 <rect key="frame" x="0.0" y="22" width="375" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EiD-uK-EQS" id="8Of-5C-gJf">
@@ -63,24 +63,30 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ThumbImage" destination="0kZ-XK-1nd" id="yGP-yQ-xpO"/>
+                                    <outlet property="locationName" destination="glp-9z-BRz" id="cMt-W8-0ut"/>
                                     <outlet property="locationNameLabel" destination="glp-9z-BRz" id="S7y-Ab-BN2"/>
-                                    <outlet property="nameLabel" destination="bqR-f0-kM1" id="Ihb-Ls-4JE"/>
+                                    <outlet property="nameLabel" destination="bqR-f0-kM1" id="8z9-4v-VAu"/>
                                     <outlet property="thumbnailImageView" destination="0kZ-XK-1nd" id="DR7-VY-ZJm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="2Bb-PL-KNW" id="WcJ-zt-PLg"/>
+                            <outlet property="dataSource" destination="2Bb-PL-KNW" id="dwd-4O-UoJ"/>
                             <outlet property="delegate" destination="2Bb-PL-KNW" id="IC9-mI-oYO"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Vacation Spots" id="wdM-cL-I84">
                         <barButtonItem key="backBarButtonItem" title="Back" id="mpn-hd-1cn"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableViewHeroes" destination="aRO-TK-d7d" id="Oe2-SF-c6X"/>
+                        <outlet property="view" destination="aRO-TK-d7d" id="3Mw-2a-4yo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3h-bA-5PZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="190"/>
+            <point key="canvasLocation" x="960.79999999999995" y="189.3553223388306"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pTb-Pj-lIz">
